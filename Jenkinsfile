@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.12.0-alpine3.18' } }
+    agent { docker { image 'python:3.11.4-slim-buster' } }
     stages {
-        stage('build') {
+        stage('log python version') {
             steps {
-                echo 'Building...'
+                echo 'python version:'
                 sh 'python --version'
             }
         }
