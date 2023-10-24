@@ -1,13 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.11.4-slim-buster' } }
-    stages {
-        stage('log python version') {
-            steps {
-                echo 'python version:'
-                sh 'python --version'
-            }
-        }
-        
-        
+    agent { docker { image 'maven:3.3.3' } }
+      stages {
+        stage('log version info') {
+      steps {
+        sh 'mvn --version'
+        sh 'mvn clean install'
+      }
     }
+  }
 }
