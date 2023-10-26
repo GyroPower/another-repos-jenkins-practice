@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('version') {
             steps {
-                sh 'pwsh --version'
+                bat 'pwsh --version'
             }
         }
         stage('hello friend'){
             steps {
-                sh 'python hellofriend.py'
+                bat 'python hellofriend.py'
             }
         }
     }
