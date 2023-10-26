@@ -1,16 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('version') {
+        stage('build-docker-python-container') {
             steps {
-                bat 'python --version'
+                bat 'docker run --name python-container-test python:3.12.0-alpine3.17'
             }
         }
         stage('hello friend'){
             steps {
-                bat 'python hellofriend.py'
-                bat 'docker --version'
-                bat 'docker ps'
+                bat 'docker exec python-container-test python3 --version'
+                
             }
         }
     }
