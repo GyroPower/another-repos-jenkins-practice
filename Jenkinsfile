@@ -10,6 +10,7 @@ pipeline {
             steps {
                 bat 'python hellofriend.py'
                 bat 'docker --version'
+                bat 'docker ps'
             }
         }
     }
