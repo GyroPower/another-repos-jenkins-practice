@@ -9,7 +9,7 @@ pipeline {
         stage('hello friend'){
             steps {
                 bat 'python hellofriend.py'
-                bat 'bash hello.sh'
+                bat 'docker --version'
             }
         }
     }
