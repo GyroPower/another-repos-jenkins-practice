@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-var = "Hello Friend" 
+var="Hello Friend" 
 
 
 echo "$var"
