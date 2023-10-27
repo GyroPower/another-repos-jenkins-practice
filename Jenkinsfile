@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build-docker-python-container') {
             steps {
-                bat 'docker run --name python-container-test python:3.12.0-alpine3.17'
+                bat 'docker run --name python-container-test -it -d python:3.12.0-alpine3.17'
             }
         }
         stage('hello friend'){
